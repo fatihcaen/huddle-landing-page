@@ -1,0 +1,364 @@
+@import "mixins";
+
+/////////////////////  Colors
+
+$pink: #ff52bf;
+$very-dark-cyan: #00252e;
+$very-pale-blue: #f5faff;
+$black: #000;
+$white: #fff;
+$grey: #999;
+
+/////////////////////  Fonts
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+
+$poppins: "Poppins", sans-serif;
+$open-sans: "Open Sans", sans-serif;
+
+///////////////////// Main
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $open-sans;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $poppins;
+  @include m-0;
+}
+
+p {
+  @include m-0;
+}
+
+button {
+  font-family: $open-sans;
+}
+
+.main {
+  .intro-section {
+    grid-area: intro-section;
+  }
+
+  .grow {
+    grid-area: grow;
+  }
+
+  .flowing {
+    grid-area: flowing;
+  }
+
+  .your-users {
+    grid-area: your-users;
+  }
+
+  .ready {
+    grid-area: ready;
+  }
+
+  #footer {
+    grid-area: footer;
+  }
+
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(6, auto);
+  grid-template-areas:
+    "intro-section"
+    "grow"
+    "flowing"
+    "your-users"
+    "ready"
+    "footer";
+  row-gap: 12rem;
+}
+
+///////////////////// Navbar
+
+.navbar {
+  padding-top: 1rem;
+  .logo {
+    grid-area: logo;
+
+    img {
+      @include w-100-h-auto;
+    }
+  }
+
+  .try-it {
+    grid-area: try-it;
+
+    button {
+      background: transparent;
+      border: 1px solid $pink;
+      color: $pink;
+      border-radius: 2rem;
+      box-shadow: 0px 0px 4px $pink;
+      font-size: calc(13px + 1.5 * ((100vw - 320px) / 1120));
+    }
+  }
+}
+
+///////////////////// Intro
+
+.intro-section {
+  grid-area: intro-section;
+  margin-top: 7rem;
+
+  .intro {
+    grid-area: intro;
+
+    .heading {
+      grid-area: heading;
+
+      h1 {
+        @include text-center;
+        font-size: calc(24px + 16 * ((100vw - 320px) / 1120));
+      }
+    }
+
+    .paragraph {
+      grid-area: paragraph;
+
+      p {
+        @include text-center;
+        font-size: calc(13px + 6 * ((100vw - 320px) / 1120));
+      }
+    }
+
+    .get-started {
+      grid-area: get-started;
+
+      button {
+        background: $pink;
+        border: 1px solid $pink;
+        color: $white;
+        font-weight: 600;
+        border-radius: 3rem;
+        box-shadow: 0px 3px 6px rgba($color: $black, $alpha: 0.3);
+        font-size: calc(10px + 6 * ((100vw - 320px) / 1120));
+      }
+    }
+  }
+
+  ///////////////////// Screen Mockups
+
+  .screen-mockups {
+    grid-area: screen-mockups;
+    width: 75%;
+
+    img {
+      @include w-100-h-auto;
+    }
+  }
+
+  ///////////////////// Statistics
+
+  .statistics {
+    grid-area: statistics;
+
+    .communities,
+    .messages {
+      .icon {
+        grid-area: icon;
+
+        img {
+          @include w-100-h-auto;
+        }
+      }
+
+      .number {
+        grid-area: number;
+
+        h1 {
+          font-family: $open-sans;
+          font-weight: 700;
+          font-size: calc(48px + 24 * ((100vw - 320px) / 1120));
+        }
+      }
+
+      .paragraph {
+        grid-area: paragraph;
+        color: $grey;
+        font-weight: 600;
+        @include text-center;
+        font-size: calc(13px + 6 * ((100vw - 320px) / 1120));
+      }
+    }
+
+    .communities {
+      grid-area: communities;
+    }
+
+    .messages {
+      grid-area: messages;
+    }
+  }
+}
+
+///////////////////// Grow, Flowing, Your Users
+
+.grow,
+.flowing,
+.your-users {
+  .text-section {
+    grid-area: text-section;
+    .heading {
+      grid-area: heading;
+
+      h4 {
+        font-size: calc(16px + 14 * ((100vw - 320px) / 1120));
+      }
+    }
+
+    .paragraph {
+      grid-area: paragraph;
+
+      p {
+        font-size: calc(13px + 3 * ((100vw - 320px) / 1120));
+      }
+    }
+  }
+
+  .illustration {
+    grid-area: illustration;
+    img {
+      @include w-100-h-auto;
+    }
+  }
+}
+
+///////////////////// Ready
+
+.ready {
+  grid-area: ready;
+
+  .heading {
+    grid-area: heading;
+
+    h3 {
+      font-size: calc(18.72px + 13.28 * ((100vw - 320px) / 1120));
+    }
+  }
+
+  .get-started {
+    grid-area: get-started;
+
+    button {
+      background: $pink;
+      border: 1px solid $pink;
+      color: $white;
+      font-weight: 600;
+      border-radius: 3rem;
+      box-shadow: 0px 3px 6px rgba($color: $black, $alpha: 0.3);
+      font-size: calc(10px + 6 * ((100vw - 320px) / 1120));
+    }
+  }
+}
+
+///////////////////// Footer
+
+#footer {
+  @include p-0;
+}
+
+.footer-shape {
+  img {
+    @include w-100-h-auto;
+  }
+}
+
+.footer {
+  .contact-section {
+    grid-area: contact-section;
+
+    .logo {
+      grid-area: logo;
+
+      img {
+        @include w-100-h-auto;
+      }
+    }
+
+    .paragraph {
+      grid-area: paragraph;
+
+      p {
+        @include text-white;
+        font-size: calc(11.2px + 0.8 * ((100vw - 320px) / 1120));
+      }
+    }
+
+    .contact-info {
+      grid-area: contact-info;
+
+      .phone,
+      .email {
+        font-size: calc(11.2px + 1.6 * ((100vw - 320px) / 1120));
+        @include text-white;
+        img {
+          margin-right: 0.5rem;
+        }
+      }
+    }
+
+    .social-icons {
+      grid-area: social-icons;
+
+      .facebook,
+      .twitter,
+      .instagram {
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  .subscribe {
+    grid-area: subscribe;
+
+    .title {
+      grid-area: title;
+
+      h4 {
+        @include text-white;
+        font-size: calc(16px + 6.4 * ((100vw - 320px) / 1120));
+      }
+    }
+
+    .paragraph {
+      grid-area: paragraph;
+
+      p {
+        @include text-white;
+        font-size: calc(11.2px + 0.8 * ((100vw - 320px) / 1120));
+      }
+    }
+
+    .newsletter {
+      grid-area: newsletter;
+
+      .input {
+        grid-area: input;
+      }
+
+      .sub-button {
+        grid-area: sub-button;
+      }
+    }
+  }
+}
+
+@import "responsive-m";
+@import "responsive-d";
