@@ -37,17 +37,19 @@ button {
 }
 .main .grow {
   grid-area: grow;
+  background-color: #f5faff;
 }
 .main .flowing {
   grid-area: flowing;
 }
 .main .your-users {
   grid-area: your-users;
+  background-color: #f5faff;
 }
 .main .ready {
   grid-area: ready;
 }
-.main #footer {
+.main footer {
   grid-area: footer;
 }
 
@@ -151,6 +153,29 @@ button {
   grid-area: messages;
 }
 
+.grow-bg-top-m,
+.grow-bg-bottom-m,
+.your-users-bg-top-m,
+.your-users-bg-bottom-m,
+.grow-bg-top-d,
+.grow-bg-bottom-d,
+.your-users-bg-top-d,
+.your-users-bg-bottom-d {
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+.grow-bg-top-m img,
+.grow-bg-bottom-m img,
+.your-users-bg-top-m img,
+.your-users-bg-bottom-m img,
+.grow-bg-top-d img,
+.grow-bg-bottom-d img,
+.your-users-bg-top-d img,
+.your-users-bg-bottom-d img {
+  width: 100%;
+}
+
 .grow .text-section,
 .flowing .text-section,
 .your-users .text-section {
@@ -212,11 +237,6 @@ button {
 
 #footer {
   padding: 0;
-}
-
-.footer-shape img {
-  max-width: 100%;
-  height: auto;
 }
 
 .footer .contact-section {
@@ -357,6 +377,38 @@ button {
 .intro-section .statistics .messages .icon {
     width: 16%;
     justify-self: flex-start;
+  }
+
+  .grow-bg-top-m {
+    display: block;
+    position: absolute;
+    transform: translateY(5.75rem);
+    width: 100%;
+  }
+  .grow-bg-top-m img {
+    width: 100%;
+  }
+
+  .grow-bg-bottom-m {
+    display: block;
+    transform: translateY(20.75rem);
+  }
+
+  .your-users-bg-top-m {
+    display: block;
+    transform: translateY(-5rem);
+  }
+
+  .your-users-bg-bottom-m {
+    display: block;
+    transform: translateY(18.75rem);
+  }
+
+  .grow-bg-top-d,
+.grow-bg-bottom-d,
+.your-users-bg-top-d,
+.your-users-bg-bottom-d {
+    display: none;
   }
 
   .grow,
@@ -515,13 +567,62 @@ button {
   }
 }
 @media (min-width: 375px) {
+  .grow-bg-top-m {
+    transform: translateY(-7rem);
+  }
+
+  .grow-bg-bottom-m {
+    transform: translateY(21.5rem);
+  }
+
+  .your-users-bg-top-m {
+    transform: translateY(-6rem);
+  }
+
+  .your-users-bg-bottom-m {
+    transform: translateY(20.5rem);
+  }
+
   .footer-shape-m {
     transform: translateY(-3rem);
   }
 }
 @media (min-width: 576px) {
+  .grow-bg-top-m {
+    transform: translateY(-10.75rem);
+  }
+
+  .grow-bg-bottom-m {
+    transform: translateY(26.75rem);
+  }
+
+  .your-users-bg-top-m {
+    transform: translateY(-9.75rem);
+  }
+
+  .your-users-bg-bottom-m {
+    transform: translateY(25.5rem);
+  }
+
   .footer-shape-m {
     transform: translateY(-5rem);
+  }
+}
+@media (min-width: 768px) {
+  .grow-bg-top-m {
+    transform: translateY(-14rem);
+  }
+
+  .grow-bg-bottom-m {
+    transform: translateY(31.75rem);
+  }
+
+  .your-users-bg-top-m {
+    transform: translateY(-13rem);
+  }
+
+  .your-users-bg-bottom-m {
+    transform: translateY(30rem);
   }
 }
 @media (min-width: 992px) {
@@ -590,6 +691,33 @@ button {
   .intro-section .statistics .communities .paragraph,
 .intro-section .statistics .messages .paragraph {
     font-weight: 500;
+  }
+
+  .grow-bg-top-m,
+.grow-bg-bottom-m,
+.your-users-bg-top-m,
+.your-users-bg-bottom-m {
+    display: none;
+  }
+
+  .grow-bg-top-d {
+    display: block;
+    transform: translateY(-7rem);
+  }
+
+  .grow-bg-bottom-d {
+    display: block;
+    transform: translateY(17.5rem);
+  }
+
+  .your-users-bg-top-d {
+    display: block;
+    transform: translateY(-6.5rem);
+  }
+
+  .your-users-bg-bottom-d {
+    display: block;
+    transform: translateY(16.5rem);
   }
 
   .grow,
@@ -787,11 +915,43 @@ button {
   }
 }
 @media (min-width: 1024px) {
+  .grow-bg-top-d {
+    transform: translateY(-7rem);
+  }
+
+  .grow-bg-bottom-d {
+    transform: translateY(18rem);
+  }
+
+  .your-users-bg-top-d {
+    transform: translateY(-6.85rem);
+  }
+
+  .your-users-bg-bottom-d {
+    transform: translateY(17rem);
+  }
+
   .footer-shape-d {
     transform: translateY(-7rem);
   }
 }
 @media (min-width: 1200px) {
+  .grow-bg-top-d {
+    transform: translateY(-8.5rem);
+  }
+
+  .grow-bg-bottom-d {
+    transform: translateY(21.5rem);
+  }
+
+  .your-users-bg-top-d {
+    transform: translateY(-8rem);
+  }
+
+  .your-users-bg-bottom-d {
+    transform: translateY(20.5rem);
+  }
+
   .footer-shape-d {
     transform: translateY(-8rem);
   }
@@ -799,6 +959,26 @@ button {
 @media (min-width: 1440px) {
   .footer-shape-d {
     transform: translateY(-9.5rem);
+  }
+
+  .grow-bg-top-d {
+    transform: translateY(-10rem);
+  }
+
+  .grow-bg-bottom-d {
+    transform: translateY(26rem);
+  }
+
+  .your-users-bg-top-d {
+    transform: translateY(-9.5rem);
+  }
+
+  .your-users-bg-bottom-d {
+    transform: translateY(24.5rem);
+  }
+
+  .footer-shape-d {
+    transform: translateY(-8rem);
   }
 }
 

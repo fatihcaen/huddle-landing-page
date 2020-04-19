@@ -51,6 +51,7 @@ button {
 
   .grow {
     grid-area: grow;
+    background-color: $very-pale-blue;
   }
 
   .flowing {
@@ -59,13 +60,14 @@ button {
 
   .your-users {
     grid-area: your-users;
+    background-color: $very-pale-blue;
   }
 
   .ready {
     grid-area: ready;
   }
 
-  #footer {
+  footer {
     grid-area: footer;
   }
 
@@ -207,6 +209,22 @@ button {
 
 ///////////////////// Grow, Flowing, Your Users
 
+.grow-bg-top-m,
+.grow-bg-bottom-m,
+.your-users-bg-top-m,
+.your-users-bg-bottom-m,
+.grow-bg-top-d,
+.grow-bg-bottom-d,
+.your-users-bg-top-d,
+.your-users-bg-bottom-d {
+  position: absolute;
+  width: 100%;
+  img {
+    width: 100%;
+  }
+  z-index: -1;
+}
+
 .grow,
 .flowing,
 .your-users {
@@ -269,12 +287,6 @@ button {
 
 #footer {
   @include p-0;
-}
-
-.footer-shape {
-  img {
-    @include w-100-h-auto;
-  }
 }
 
 .footer {

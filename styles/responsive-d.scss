@@ -93,6 +93,33 @@
 
   ///////////////////// Grow, Flowing, Your Users
 
+  .grow-bg-top-m,
+  .grow-bg-bottom-m,
+  .your-users-bg-top-m,
+  .your-users-bg-bottom-m {
+    display: none;
+  }
+
+  .grow-bg-top-d {
+    display: block;
+    transform: translateY(-7rem);
+  }
+
+  .grow-bg-bottom-d {
+    display: block;
+    transform: translateY(17.5rem);
+  }
+
+  .your-users-bg-top-d {
+    display: block;
+    transform: translateY(-6.5rem);
+  }
+
+  .your-users-bg-bottom-d {
+    display: block;
+    transform: translateY(16.5rem);
+  }
+
   .grow,
   .your-users {
     display: grid;
@@ -329,12 +356,44 @@
 }
 
 @media (min-width: 1024px) {
+  .grow-bg-top-d {
+    transform: translateY(-7rem);
+  }
+
+  .grow-bg-bottom-d {
+    transform: translateY(18rem);
+  }
+
+  .your-users-bg-top-d {
+    transform: translateY(-6.85rem);
+  }
+
+  .your-users-bg-bottom-d {
+    transform: translateY(17rem);
+  }
+
   .footer-shape-d {
     transform: translateY(-7rem);
   }
 }
 
 @media (min-width: 1200px) {
+  .grow-bg-top-d {
+    transform: translateY(-8.5rem);
+  }
+
+  .grow-bg-bottom-d {
+    transform: translateY(21.5rem);
+  }
+
+  .your-users-bg-top-d {
+    transform: translateY(-8rem);
+  }
+
+  .your-users-bg-bottom-d {
+    transform: translateY(20.5rem);
+  }
+
   .footer-shape-d {
     transform: translateY(-8rem);
   }
@@ -343,5 +402,25 @@
 @media (min-width: 1440px) {
   .footer-shape-d {
     transform: translateY(-9.5rem);
+  }
+
+  .grow-bg-top-d {
+    transform: translateY(-10rem);
+  }
+
+  .grow-bg-bottom-d {
+    transform: translateY(26rem);
+  }
+
+  .your-users-bg-top-d {
+    transform: translateY(-9.5rem);
+  }
+
+  .your-users-bg-bottom-d {
+    transform: translateY(24.5rem);
+  }
+
+  .footer-shape-d {
+    transform: translateY(-8rem);
   }
 }
