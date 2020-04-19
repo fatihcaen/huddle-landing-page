@@ -358,6 +358,18 @@ button {
       }
     }
   }
+
+  .credits {
+    grid-area: credits;
+    font-family: $poppins;
+    @include text-white;
+    font-size: calc(13px + 8 * ((100vw - 320px) / 1120));
+    a {
+      color: $pink;
+      font-weight: 700;
+      text-decoration: none;
+    }
+  }
 }
 
 @import "responsive-m";

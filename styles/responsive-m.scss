@@ -175,10 +175,11 @@
   .footer {
     display: grid;
     grid-template-columns: 10% auto 10%;
-    grid-template-rows: repeat(2, auto);
+    grid-template-rows: repeat(3, auto);
     grid-template-areas:
       ". subscribe ."
-      ". contact-section .";
+      ". contact-section ."
+      ". credits .";
     row-gap: 5rem;
 
     .subscribe {
@@ -283,19 +284,27 @@
         }
       }
     }
+
+    .credits {
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: repeat(2, auto);
+      justify-items: center;
+      row-gap: 0.5rem;
+    }
   }
 }
 
 ///////////////////// 576px
 
-@media (min-width: 576px) {
-  .footer-shape-m {
-    transform: translateY(-5rem);
-  }
-}
-
 @media (min-width: 375px) {
   .footer-shape-m {
     transform: translateY(-3rem);
+  }
+}
+
+@media (min-width: 576px) {
+  .footer-shape-m {
+    transform: translateY(-5rem);
   }
 }
