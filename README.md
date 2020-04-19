@@ -2,9 +2,9 @@
 
 This is the fylo dark theme landing page challenge by frontendmenter.io. Coded by me.
 
-You can access the challenge from <a href="https://www.frontendmentor.io/challenges/fylo-dark-theme-landing-page-5ca5f2d21e82137ec91a50fd" target="_blank">this link</a>
+You can access the challenge from <a href="https://www.frontendmentor.io/challenges/huddle-landing-page-with-curved-sections-5ca5ecd01e82137ec91a50f2" target="_blank">this link</a>
 
-You can access the website from <a href="https://fylo-dark-theme-landing-page-6zdtkxn51.now.sh/" target="_blank">this link</a>
+You can access the website from <a href="https://huddle-landing-page.fatihcaen.now.sh/" target="_blank">this link</a>
 
 # Used technologies
 
